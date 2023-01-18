@@ -56,9 +56,9 @@ function verifyToken(req, res, next) {
   console.log("bearerHeader =>",bearerHeader);
   if(typeof bearerHeader !== 'undefined') {
     const bearer = bearerHeader.split(' ');
-    console.log("bearer $$$$ ",bearer);
+    console.log("bearer====> ",bearer);
     const bearerToken = bearer[1];
-    console.log("bearerToken @@@@ ",bearerToken);
+    console.log("bearerToken ==>",bearerToken);
     req.token = bearerToken;
     next();
     } else
